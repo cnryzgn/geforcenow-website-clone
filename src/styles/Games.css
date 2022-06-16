@@ -1,0 +1,108 @@
+@import url('./GameCard.css');
+
+.container {
+    width: 93%;
+    margin: 10px auto;
+}
+
+.container .top-side {
+    display: flex;
+    background-color: #222;
+    border-bottom: 1px solid #666;
+    justify-content: space-between;
+    align-content: center;
+    position: sticky;
+    top: 9vh;
+    z-index: 999;
+}
+
+.top-side > div {
+    display: flex;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 1rem;
+    color: aliceblue;
+    padding-bottom: 10px;
+}
+
+.left p:first-child {
+    margin-right: 17px;
+    font-weight: bold;
+}
+
+.left p:last-child {
+    font-size: .900rem;
+    color: #ccc;
+    border: 1px solid #ccc; 
+    padding-left: 12px;
+    cursor: default;
+    transition: .5s;
+}
+
+.left p:last-child > i { 
+    margin-left: 5px; 
+    cursor: pointer;
+    padding: 8px 10px;
+}
+
+.left p:last-child:hover  { background-color: #333; }
+
+.left p:last-child:hover > i { background-color: #444; }
+
+.right .queue {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-right: 20px;
+    padding: 10px 6px;  
+    cursor: pointer;
+    transition: .5s;
+}
+
+.queue:hover {
+    background-color: rgba(136, 136, 136, 0.2);
+}
+
+.queue > i {
+    margin-inline: 12px;
+}
+
+.queue > i:last-child {
+    padding-bottom: 8px;
+}
+
+.filter {
+    font-size: 1.3rem;
+    padding: 10px 12px;
+    margin-top: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: .5s;
+    position: relative;
+}
+
+.filter::after {
+    content: '';
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: lime;
+    position: absolute;
+    top: 9px;
+    right: 8px;
+}
+
+.filter:hover {
+    background-color: rgba(136, 136, 136, 0.2);
+}
+
+/** MEDIA **/
+
+
+@media (max-width: 960px) {
+    .right .queue {
+        margin-right: 0;
+    }
+
+}
